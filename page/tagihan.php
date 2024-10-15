@@ -372,11 +372,11 @@ $conn->close();
                                                 <input type="checkbox" id="<?= $inputId; ?>"
                                                     class="bg-transparent peer mr-2 appearance-none h-4 w-4 border-2 rounded-full hover:border-teal-500 cursor-pointer border-teal-300"
                                                     name="siswa[]"
-                                                    value="<?= htmlspecialchars($option); ?>"
+                                                    value="<?= htmlspecialchars($option ?? ''); ?>"
                                                     data-siswa-id="<?= $index; ?>"> <!-- Gunakan $index sebagai data-siswa-id -->
                                                 <label for="<?= $inputId; ?>"
                                                     class="flex items-center w-full p-1 border-b rounded cursor-pointer transition-colors duration-200 hover:bg-teal-600 hover:text-white  peer-checked:bg-green-500 peer-checked:text-white">
-                                                    <?= htmlspecialchars($option); ?>
+                                                    <?= htmlspecialchars($option ?? ''); ?>
                                                 </label>
                                             </div>
                                         <?php endforeach; ?>
